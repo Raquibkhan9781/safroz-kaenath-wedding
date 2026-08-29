@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0c2d23" />
+  <title>Keanath & Safroz — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="petals" aria-hidden="true"></div>
+
+  <main>
+    <!-- Opening envelope -->
+    <section class="opening" id="opening">
+  <div class="frame"></div>
+
+  <div class="invitation-stage">
+    <div class="envelope-scene">
+      <div class="envelope-shadow"></div>
+
+      <!-- The real invitation card starts inside the envelope -->
+      <div class="paper-card" id="paperCard">
+        <div class="paper-border">
+          <div class="paper-small">WEDDING INVITATION</div>
+          <div class="paper-names">Safroz <span>&amp;</span> Kaenat</div>
+          <div class="paper-line">19 · 11 · 2026</div>
+          <div class="paper-read">♥</div>
+        </div>
+      </div>
+
+      <!-- Envelope -->
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-left"></div>
+        <div class="envelope-right"></div>
+        <div class="envelope-bottom"></div>
+        <div class="flap"></div>
+        <div class="seal">بِسْمِ<br>اللّٰهِ</div>
+        <span class="tap">TAP TO OPEN</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="opening-line" id="openingLine">Tap the envelope to open your invitation</p>
+  <button class="open-btn" id="openBtn">Open Invitation</button>
+</section>
+
+    <div class="site hidden" id="site">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-inner">
+          <span class="eyebrow">TUESDAY · NOVEMBER · 19 · BHERIHARWA</span>
+          <h1><span>Safroz</span><i>&amp;</i><span>Kaenat</span></h1>
+          <p class="script">are getting married</p>
+          <div class="divider">◆</div>
+          <div class="hero-actions">
+            <a href="#rsvp" class="btn btn-dark">RSVP</a>
+            <a href="#events" class="btn btn-light">VIEW EVENTS</a>
+          </div>
+          <div class="scroll-note">SCROLL <span>↓</span></div>
+        </div>
+      </section>
+
+      <!-- Quran -->
+      <section class="quote section-light">
+        <div class="card quote-card reveal">
+          <div class="arabic" dir="rtl">وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</div>
+          <p class="translation">“And among His signs is that He created for you spouses from among yourselves, that you may find tranquility in them; and He placed between you affection and mercy.”</p>
+          <span class="reference">SURAH AR-RUM · 30:21</span>
+        </div>
+      </section>
+
+      <!-- Invitation -->
+      <section class="scratch-section section-light" id="scratch">
+  <p class="eyebrow">A LITTLE SURPRISE</p>
+  <h2>Scratch &amp; Reveal</h2>
+  <p class="hint">Scratch the golden box with your finger or mouse ✨</p>
+
+  <div class="scratch-card-wrap">
+    <div class="scratch-card" id="scratchCard">
+      <div class="reveal-message">
+        <div class="tiny">SAVE THE DATE</div>
+        <div class="revealed-date">19 · 11 · 2026</div>
+        <div class="revealed-title">NIKAH</div>
+        <div class="revealed-time">9:00 PM</div>
+        <div class="tiny">KEANATH ♥ SAFROZ</div>
+      </div>
+
+      <div class="scratch-cover">
+        <div class="scratch-shine"></div>
+        <div class="scratch-gift">✦</div>
+        <div class="scratch-cover-title">A SURPRISE FOR YOU</div>
+        <div class="scratch-cover-subtitle">SCRATCH TO REVEAL</div>
+      </div>
+
+      <canvas id="scratchCanvas" aria-label="Scratch to reveal the wedding surprise"></canvas>
+      <div class="scratch-cursor" id="scratchCursor">✦</div>
+    </div>
+  </div>
+
+  <p class="scratch-status" id="scratchStatus">✨ Scratch the box to open your surprise</p>
+</section>
+<section class="invitation section-light">
+        <p class="eyebrow">OUR INVITATION</p>
+        <h2>Dear Family &amp; Friends</h2>
+        <div class="mini-divider">◇</div>
+        <div class="card invitation-card reveal">
+          <p>By the grace of Allah, we joyfully invite you to be part of our Nikah and Walima celebrations. Your presence, prayers, and blessings would mean the world to us as we begin this new journey together.</p>
+          <p class="script signature">With love, Keanath &amp; Safroz</p>
+          <span class="names">KEANATH · SAFROZ</span>
+        </div>
+      </section>
+
+      <!-- Events -->
+      <section class="events" id="events">
+<div class="section-heading"><p class="eyebrow">JOIN US</p><h2>Our Wedding Events</h2><div class="mini-divider">◇</div></div>
+<div class="event-grid">
+<article class="event-card reveal"><div class="event-icon">☾</div><span class="event-day">TUESDAY · 17 NOVEMBER 2026</span><h3>Haldi</h3><p>8:00 PM</p><small>Bheriharwa</small></article>
+<article class="event-card reveal"><div class="event-icon">✦</div><span class="event-day">WEDNESDAY · 18 NOVEMBER 2026</span><h3>Mehndi</h3><p>8:00 PM</p><small>Bheriharwa</small></article>
+<article class="event-card featured reveal"><div class="event-icon">♥</div><span class="event-day">THURSDAY · 19 NOVEMBER 2026</span><h3>Nikah</h3><p>9:00 PM</p><small>Bheriharwa</small></article>
+</div></section>
+
+      <!-- Countdown -->
+      <section class="countdown section-light">
+        <p class="eyebrow">THE BIG DAY</p>
+        <h2>Counting Every Moment</h2>
+        <div class="timer" id="timer">
+          <div><strong id="days">000</strong><span>DAYS</span></div>
+          <div><strong id="hours">00</strong><span>HOURS</span></div>
+          <div><strong id="minutes">00</strong><span>MINUTES</span></div>
+          <div><strong id="seconds">00</strong><span>SECONDS</span></div>
+        </div>
+      </section>
+
+      <!-- Venue -->
+      <section class="venue" id="venue">
+        <div class="section-heading">
+          <p class="eyebrow">WHERE TO FIND US</p>
+          <h2>The Venue</h2>
+          <div class="mini-divider">◇</div>
+        </div>
+        <div class="venue-card reveal">
+          <div class="venue-photo">
+            <div class="photo-placeholder">BHERIHARWA</div>
+          </div>
+          <div class="venue-info">
+            <h3>Bheriharwa</h3>
+            <p>Bheriharwa, P/S Kangli, P/O Sugha Bhawani Pur, West Champaran</p>
+            <ul><li>Stay at night</li><li>Parking is available</li></ul>
+            <div class="venue-actions">
+              <a class="btn btn-dark" target="_blank" rel="noopener"
+                 href="https://www.google.com/maps/place/Choti+Masjid+Bheriharwa/data=!4m7!3m6!1s0x39934f69850202dd:0x753752d5fa351936!8m2!3d26.8352524!4d84.7898321!16s%2Fg%2F11fmmvls13!19sChIJ3QIChWlPkzkRNhk1-tVSN3U?authuser=0&hl=en&g_ep=EgoyMDI2MDgyNS4wIJJjKgBIAVAD&rclk=1">OPEN IN MAPS</a>
+              <img class="qr" src="assets/qr.png" alt="QR code for venue directions">
+            </div>
+            <span class="scan">SCAN QR FOR DIRECTIONS</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP -->
+      <section class="rsvp section-light" id="rsvp">
+        <p class="eyebrow">KINDLY RESPOND</p>
+        <h2>Will You Join Us?</h2>
+        <div class="mini-divider">◇</div>
+        <p class="rsvp-text">We have saved you a seat — kindly let us know if you can join us. Please reply by <strong>17 November 2026.</strong></p>
+        <form id="rsvpForm" class="rsvp-form">
+  <input id="guestName" required type="text" placeholder="Your name">
+  <input id="guestWhatsapp" required type="tel" inputmode="tel" placeholder="Your WhatsApp number">
+  <select id="attendance" required>
+    <option value="" disabled selected>Will you attend?</option>
+    <option value="Joyfully attending">Joyfully attending</option>
+    <option value="Sorry, can't attend">Sorry, can't attend</option>
+  </select>
+  <input id="guestCount" required type="number" min="1" max="20" value="1" placeholder="Number of guests">
+  <button class="btn btn-dark" type="submit">SEND RSVP ON WHATSAPP</button>
+</form>
+        <p class="form-message" id="formMessage"></p>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-ornament">✦</div>
+        <p class="script">May Allah bless Keanath &amp; Safroz</p>
+        <p>With love, Keanath &amp; Safroz</p>
+        <small>#KEANATHWEDSSAFROZ · 19.11.2026</small>
+      </footer>
+    </div>
+  </main>
+
+  <audio id="music" loop preload="none">
+    <!-- Put your own MP3 at assets/wedding-music.mp3 and uncomment the src below if desired. -->
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
