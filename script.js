@@ -36,7 +36,7 @@ function openInvitation(){
 openBtn.addEventListener("click", openInvitation);
 envelope.addEventListener("click", openInvitation);
 
-// Countdown: 12 December 2026, 7:00 PM IST
+// Countdown: 19 November 2026, 9:00 PM IST
 const target = new Date("2026-11-19T21:00:00+05:30").getTime();
 function tick(){
   let diff = target - Date.now();
@@ -57,8 +57,6 @@ const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")});
 },{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
-
-// Demo RSVP — replace this with Formspree/Google Forms/backend later.
 
 
 // ===== Scratch & Reveal — touch + mouse + animated scratch effect =====
@@ -248,4 +246,47 @@ document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
   });
 
   setupCanvas();
+})();
+
+
+// ===== RSVP -> WhatsApp =====
+(() => {
+  const form = document.getElementById("rsvpForm");
+  const message = document.getElementById("formMessage");
+
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("guestName")?.value.trim();
+    const guestWhatsapp = document.getElementById("guestWhatsapp")?.value.trim();
+    const attendance = document.getElementById("attendance")?.value;
+    const guestCount = document.getElementById("guestCount")?.value;
+
+    if (!name || !guestWhatsapp || !attendance || !guestCount) {
+      if (message) message.textContent = "Please fill all RSVP details.";
+      return;
+    }
+
+    // The recipient is the host's WhatsApp number.
+    const hostNumber = "919781041337";
+
+    const text =
+      "💍 WEDDING RSVP — KEANATH & SAFROZ%0A%0A" +
+      "👤 Name: " + encodeURIComponent(name) + "%0A" +
+      "📱 Guest WhatsApp: " + encodeURIComponent(guestWhatsapp) + "%0A" +
+      "✅ Attendance: " + encodeURIComponent(attendance) + "%0A" +
+      "👥 Guests: " + encodeURIComponent(guestCount) + "%0A%0A" +
+      "📅 Nikah: 19 November 2026, 9:00 PM%0A" +
+      "📍 Venue: Bheriharwa";
+
+    const url = "https://wa.me/" + hostNumber + "?text=" + text;
+
+    if (message) {
+      message.textContent = "Opening WhatsApp…";
+    }
+
+    window.location.href = url;
+  });
 })();
