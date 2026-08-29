@@ -269,19 +269,25 @@ document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
       return;
     }
 
-    // The recipient is the host's WhatsApp number.
+    // Host's WhatsApp number: +91 9781041337
     const hostNumber = "919781041337";
 
-    const text =
-      "💍 WEDDING RSVP — KEANATH & SAFROZ%0A%0A" +
-      "👤 Name: " + encodeURIComponent(name) + "%0A" +
-      "📱 Guest WhatsApp: " + encodeURIComponent(guestWhatsapp) + "%0A" +
-      "✅ Attendance: " + encodeURIComponent(attendance) + "%0A" +
-      "👥 Guests: " + encodeURIComponent(guestCount) + "%0A%0A" +
-      "📅 Nikah: 19 November 2026, 9:00 PM%0A" +
-      "📍 Venue: Bheriharwa";
+    // Build the exact message first, then encode the WHOLE message once.
+    const whatsappMessage =
+`💍 Kaenat & Safroz Wedding RSVP
 
-    const url = "https://wa.me/" + hostNumber + "?text=" + text;
+👤 Name: ${name}
+📱 WhatsApp: ${guestWhatsapp}
+✅ Attendance: ${attendance}
+👨‍👩‍👧 Number of guests: ${guestCount}
+
+📅 Nikah: 19 November 2026
+🕘 Time: 9:00 PM
+📍 Bheriharwa`;
+
+    const url =
+      "https://wa.me/" + hostNumber +
+      "?text=" + encodeURIComponent(whatsappMessage);
 
     if (message) {
       message.textContent = "Opening WhatsApp…";
